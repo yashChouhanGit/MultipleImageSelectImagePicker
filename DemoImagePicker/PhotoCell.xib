@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="ZoL-eQ-o8G" customClass="PhotoCell" customModule="DemoImagePicker" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="371" height="408"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="sIB-pd-PgU">
+                <rect key="frame" x="0.0" y="0.0" width="371" height="408"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SBz-XK-Ob4">
+                        <rect key="frame" x="0.0" y="0.0" width="371" height="408"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gn3-1T-9rw">
+                                <rect key="frame" x="0.0" y="0.0" width="371" height="408"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gn3-1T-9rw" secondAttribute="height" id="nKI-NT-Uhz"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="nKI-NT-Uhz"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0bf-kY-I2I">
+                                <rect key="frame" x="0.0" y="0.0" width="371" height="408"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xuX-vU-lOp">
+                                <rect key="frame" x="12" y="12" width="20" height="20"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PDB-sH-cdN">
+                                        <rect key="frame" x="4" y="4" width="12" height="12"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="12" id="Q3u-gB-wCj"/>
+                                            <constraint firstAttribute="height" constant="12" id="Quv-ft-INN"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="PDB-sH-cdN" firstAttribute="leading" secondItem="xuX-vU-lOp" secondAttribute="leading" constant="4" id="J7g-8w-vVG"/>
+                                    <constraint firstAttribute="trailing" secondItem="PDB-sH-cdN" secondAttribute="trailing" constant="4" id="UnT-e2-Or5"/>
+                                    <constraint firstAttribute="bottom" secondItem="PDB-sH-cdN" secondAttribute="bottom" constant="4" id="rfh-ua-6AW"/>
+                                    <constraint firstItem="PDB-sH-cdN" firstAttribute="top" secondItem="xuX-vU-lOp" secondAttribute="top" constant="4" id="sSy-hm-Sdc"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gn3-1T-9rw" secondAttribute="trailing" id="0Tv-Zr-CUR"/>
+                            <constraint firstAttribute="bottom" secondItem="0bf-kY-I2I" secondAttribute="bottom" id="2se-JY-o3w"/>
+                            <constraint firstItem="0bf-kY-I2I" firstAttribute="leading" secondItem="SBz-XK-Ob4" secondAttribute="leading" id="D8g-65-PAj"/>
+                            <constraint firstAttribute="bottom" secondItem="gn3-1T-9rw" secondAttribute="bottom" id="GDS-w7-ohj"/>
+                            <constraint firstItem="xuX-vU-lOp" firstAttribute="top" secondItem="SBz-XK-Ob4" secondAttribute="top" constant="12" id="NEH-z8-VvX"/>
+                            <constraint firstItem="0bf-kY-I2I" firstAttribute="top" secondItem="SBz-XK-Ob4" secondAttribute="top" id="ZqR-ol-BDA"/>
+                            <constraint firstAttribute="trailing" secondItem="0bf-kY-I2I" secondAttribute="trailing" id="d60-Bx-K6B"/>
+                            <constraint firstItem="gn3-1T-9rw" firstAttribute="top" secondItem="SBz-XK-Ob4" secondAttribute="top" id="f0W-BS-tPL"/>
+                            <constraint firstItem="xuX-vU-lOp" firstAttribute="leading" secondItem="SBz-XK-Ob4" secondAttribute="leading" constant="12" id="hxv-KF-2c1"/>
+                            <constraint firstItem="gn3-1T-9rw" firstAttribute="leading" secondItem="SBz-XK-Ob4" secondAttribute="leading" id="mor-BM-S9a"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="SBz-XK-Ob4" secondAttribute="trailing" id="3kf-jc-kId"/>
+                    <constraint firstAttribute="bottom" secondItem="SBz-XK-Ob4" secondAttribute="bottom" id="Dbr-tl-wW5"/>
+                    <constraint firstItem="SBz-XK-Ob4" firstAttribute="leading" secondItem="sIB-pd-PgU" secondAttribute="leading" id="FVm-hX-3dx"/>
+                    <constraint firstItem="SBz-XK-Ob4" firstAttribute="top" secondItem="sIB-pd-PgU" secondAttribute="top" id="JKW-tb-0Wr"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <size key="customSize" width="371" height="408"/>
+            <connections>
+                <outlet property="centerToggleButton" destination="PDB-sH-cdN" id="WAC-gw-LAu"/>
+                <outlet property="photoImageView" destination="gn3-1T-9rw" id="xWd-Xb-126"/>
+                <outlet property="toggleView" destination="xuX-vU-lOp" id="3hB-IL-nQo"/>
+                <outlet property="videoView" destination="0bf-kY-I2I" id="rPL-Ef-JLe"/>
+            </connections>
+            <point key="canvasLocation" x="-47" y="145"/>
+        </collectionViewCell>
+    </objects>
+</document>
