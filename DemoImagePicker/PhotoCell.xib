@@ -37,21 +37,19 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xuX-vU-lOp">
-                                <rect key="frame" x="12" y="12" width="20" height="20"/>
+                                <rect key="frame" x="12" y="12" width="40" height="40"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PDB-sH-cdN">
-                                        <rect key="frame" x="4" y="4" width="12" height="12"/>
+                                        <rect key="frame" x="4" y="4" width="32" height="32"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="12" id="Q3u-gB-wCj"/>
-                                            <constraint firstAttribute="height" constant="12" id="Quv-ft-INN"/>
-                                        </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="PDB-sH-cdN" firstAttribute="leading" secondItem="xuX-vU-lOp" secondAttribute="leading" constant="4" id="J7g-8w-vVG"/>
+                                    <constraint firstAttribute="height" constant="40" id="Rge-3r-U0d"/>
                                     <constraint firstAttribute="trailing" secondItem="PDB-sH-cdN" secondAttribute="trailing" constant="4" id="UnT-e2-Or5"/>
+                                    <constraint firstAttribute="width" secondItem="xuX-vU-lOp" secondAttribute="height" id="fUI-gc-51d"/>
                                     <constraint firstAttribute="bottom" secondItem="PDB-sH-cdN" secondAttribute="bottom" constant="4" id="rfh-ua-6AW"/>
                                     <constraint firstItem="PDB-sH-cdN" firstAttribute="top" secondItem="xuX-vU-lOp" secondAttribute="top" constant="4" id="sSy-hm-Sdc"/>
                                 </constraints>

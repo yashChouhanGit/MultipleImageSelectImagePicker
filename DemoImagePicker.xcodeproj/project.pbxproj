@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04B94761289FD1C100BF5CFE /* ShowMediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9475F289FD1C100BF5CFE /* ShowMediaViewController.swift */; };
+		04B94762289FD1C100BF5CFE /* ShowMediaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B94760289FD1C100BF5CFE /* ShowMediaViewController.xib */; };
 		04CCB86E25E95AFA004EFF40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB86D25E95AFA004EFF40 /* AppDelegate.swift */; };
 		04CCB87025E95AFA004EFF40 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB86F25E95AFA004EFF40 /* SceneDelegate.swift */; };
 		04CCB87225E95AFA004EFF40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB87125E95AFA004EFF40 /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04B9475F289FD1C100BF5CFE /* ShowMediaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMediaViewController.swift; sourceTree = "<group>"; };
+		04B94760289FD1C100BF5CFE /* ShowMediaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowMediaViewController.xib; sourceTree = "<group>"; };
 		04CCB86A25E95AFA004EFF40 /* DemoImagePicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoImagePicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CCB86D25E95AFA004EFF40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04CCB86F25E95AFA004EFF40 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 				04CCB88425E96409004EFF40 /* PhotoCell.xib */,
 				04CCB88725E9641E004EFF40 /* PhotoCell.swift */,
 				04CCB88A25E96573004EFF40 /* YashImagePickerController.swift */,
+				04B9475F289FD1C100BF5CFE /* ShowMediaViewController.swift */,
+				04B94760289FD1C100BF5CFE /* ShowMediaViewController.xib */,
 			);
 			path = DemoImagePicker;
 			sourceTree = "<group>";
@@ -136,6 +142,7 @@
 				04CCB88525E96409004EFF40 /* PhotoCell.xib in Resources */,
 				04CCB87A25E95AFB004EFF40 /* LaunchScreen.storyboard in Resources */,
 				04CCB87725E95AFB004EFF40 /* Assets.xcassets in Resources */,
+				04B94762289FD1C100BF5CFE /* ShowMediaViewController.xib in Resources */,
 				04CCB87525E95AFA004EFF40 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,6 +156,7 @@
 			files = (
 				04CCB88825E9641E004EFF40 /* PhotoCell.swift in Sources */,
 				04CCB88B25E96573004EFF40 /* YashImagePickerController.swift in Sources */,
+				04B94761289FD1C100BF5CFE /* ShowMediaViewController.swift in Sources */,
 				04CCB87225E95AFA004EFF40 /* ViewController.swift in Sources */,
 				04CCB86E25E95AFA004EFF40 /* AppDelegate.swift in Sources */,
 				04CCB87025E95AFA004EFF40 /* SceneDelegate.swift in Sources */,

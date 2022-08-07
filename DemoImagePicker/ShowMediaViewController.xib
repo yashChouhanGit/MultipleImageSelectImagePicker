@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShowMediaViewController" customModule="DemoImagePicker" customModuleProvider="target">
+            <connections>
+                <outlet property="showCollectionView" destination="9MI-LB-kUo" id="2PE-xj-E2O"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="9MI-LB-kUo">
+                    <rect key="frame" x="0.0" y="104" width="414" height="792"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="bab-l2-fsp">
+                        <size key="itemSize" width="376" height="631"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <cells/>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="069-tL-MMI">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="104"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="COl-Ea-c8M">
+                            <rect key="frame" x="0.0" y="44" width="64" height="44"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="Ikz-jN-1LS"/>
+                                <constraint firstAttribute="width" constant="64" id="et0-o4-NOh"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                            <state key="normal" title="BACK">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="onTappedbacKButton:" destination="-1" eventType="touchUpInside" id="GhS-Y7-XZs"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="COl-Ea-c8M" secondAttribute="bottom" constant="16" id="PWq-Md-AUY"/>
+                        <constraint firstItem="COl-Ea-c8M" firstAttribute="leading" secondItem="069-tL-MMI" secondAttribute="leading" id="Qqz-BR-XDn"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="9MI-LB-kUo" secondAttribute="bottom" id="MmA-hD-RhP"/>
+                <constraint firstItem="COl-Ea-c8M" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="VUc-vv-s79"/>
+                <constraint firstItem="069-tL-MMI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="eYB-vI-DYh"/>
+                <constraint firstAttribute="trailing" secondItem="9MI-LB-kUo" secondAttribute="trailing" id="gmq-KA-CFa"/>
+                <constraint firstAttribute="trailing" secondItem="069-tL-MMI" secondAttribute="trailing" id="p2K-ru-Nch"/>
+                <constraint firstItem="069-tL-MMI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="sSo-lh-ol4"/>
+                <constraint firstItem="9MI-LB-kUo" firstAttribute="top" secondItem="069-tL-MMI" secondAttribute="bottom" id="xmU-0A-uoY"/>
+                <constraint firstItem="9MI-LB-kUo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xyP-bE-APm"/>
+            </constraints>
+            <point key="canvasLocation" x="53.623188405797109" y="87.723214285714278"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

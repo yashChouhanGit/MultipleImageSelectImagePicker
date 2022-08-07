@@ -25,9 +25,6 @@ class YashImagePickerController: UIViewController {
         PhotoService.shared.initilizeFirstTime {
             
         }
-      /*  DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            self.photoCollectionView?.reloadData()
-        }*/
     }
     
     
@@ -36,7 +33,9 @@ class YashImagePickerController: UIViewController {
     }
     
     @IBAction func doneAction(_ sender: UIBarButtonItem) {
-        photoCollectionView?.reloadData()
+       let vc = ShowMediaViewController()
+		vc.mediaArray = PhotoService.shared.mediaAsserts.filter({$0.isSelect })
+		self.present(vc, animated: true)
     }
 
 }
@@ -63,18 +62,22 @@ extension YashImagePickerController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let photoCell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
-        if let image = PhotoService.shared.mediaAsserts[ indexPath.row] as? UIImage {
-            photoCell.configure(image)
+		let media = PhotoService.shared.mediaAsserts[ indexPath.row]
+		if let image = media.asset as? UIImage {
+			photoCell.configure(image, isSelect: media.isSelect)
         }
-        if let video = PhotoService.shared.mediaAsserts[ indexPath.row] as? AVURLAsset {
-            photoCell.configure(video)
+        if let video = media.asset as? AVURLAsset {
+            photoCell.configure(video, isSelect: media.isSelect)
         }
         return photoCell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let cell = collectionView.cellForItem(at: indexPath) as? PhotoCell else { return }
-        cell.didSelectAction()
+		var media = PhotoService.shared.mediaAsserts[ indexPath.row]
+		cell.didSelectAction(isSelect: !media.isSelect)
+		media.isSelect = !media.isSelect
+		PhotoService.shared.mediaAsserts[ indexPath.row] = media
     }
 }
 

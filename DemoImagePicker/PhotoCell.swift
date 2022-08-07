@@ -31,14 +31,16 @@ class PhotoCell: UICollectionViewCell {
     
     @IBOutlet weak var videoView: UIView!
     
-    func configure(_ image: UIImage?) {
+	func configure(_ image: UIImage?,isSelect: Bool, isSelectionShow: Bool = true) {
         photoImageView.isHidden = false
         videoView.isHidden = true
         photoImageView.image = image
         photoImageView.contentMode = .scaleToFill
+		centerToggleButton.isHidden = !isSelect
+		toggleView.isHidden = !isSelectionShow
     }
     
-    func configure(_ asset: AVURLAsset?) {
+    func configure(_ asset: AVURLAsset?,isSelect: Bool, isSelectionShow: Bool = true) {
         guard let asset  = asset else {
             photoImageView.isHidden = true
             videoView.isHidden = false
@@ -53,10 +55,12 @@ class PhotoCell: UICollectionViewCell {
         playerLayer.videoGravity = .resizeAspectFill
         playerLayer.player?.play()
         videoView.layer.addSublayer(playerLayer)
+		centerToggleButton.isHidden = !isSelect
+		toggleView.isHidden = !isSelectionShow
     }
     
-    func didSelectAction() {
-        centerToggleButton.isHidden = !centerToggleButton.isHidden
+	func didSelectAction(isSelect: Bool) {
+        centerToggleButton.isHidden = !isSelect
     }
     
 }

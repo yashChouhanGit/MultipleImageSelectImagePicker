@@ -13,7 +13,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        PhotoService.shared.initilizeFirstTime {}
+		checkAuthorization {
+			PhotoService.shared.initilizeFirstTime {}
+		}
+       
     }
 
     @IBAction func pickImagesAction(_ sender: UIButton) {
@@ -25,13 +28,28 @@ class ViewController: UIViewController {
 extension ViewController {
     func checkAuthorization(completion: @escaping () -> Void) {
         let status =  PHPhotoLibrary.authorizationStatus()
+		print(status.rawValue)
         switch status {
         case .authorized:
             completion()
         case .notDetermined:
             PHPhotoLibrary.requestAuthorization { value in
-                guard status  == .authorized else { return }
-                completion()
+				print(value.rawValue)
+				switch value {
+					case .notDetermined:
+						print("notDetermined")
+					case .restricted:
+						print("restricted")
+					case .denied:
+						print("denied")
+					case .authorized:
+						print("authorized")
+						completion()
+					case .limited:
+						print("limited")
+					 default:
+						print("default")
+				}
             }
         case .denied,.limited,.restricted: break
         default:break
@@ -53,13 +71,19 @@ extension ViewController {
 }
 
 
+struct Media {
+	var asset: Any?
+	var isSelect: Bool
+}
+
+
 class PhotoService {
     
     private var assets : [PHAsset] = []
     private typealias ImageCompletion = UIImage?
     private typealias VideoCompletion = AVURLAsset?
     
-    var mediaAsserts : [Any] = []
+    var mediaAsserts : [Media] = []
     var size : CGSize = CGSize(width: 500, height: 500)
     var contentMode : PHImageContentMode = .aspectFit
     var numberOfAsserts: Int {
@@ -116,16 +140,17 @@ class PhotoService {
     }
     
     private func assetsToImages(completion: @escaping () -> Void) {
-        guard !assets.isEmpty else {
+     /*   guard !assets.isEmpty else {
             return  completion()
-        }
+        }*/
         assets.enumerated().forEach {
             if $0.element.mediaType == .image {
                 convertPhotoAssertIntoImage($0.element) { [weak self] image in
                     if
                         let self = self,
                         let image = image {
-                        self.mediaAsserts.append(image)
+						let media = Media(asset: image, isSelect: false)
+                        self.mediaAsserts.append(media)
                     }
                 }
             } else {
@@ -133,7 +158,8 @@ class PhotoService {
                     if
                         let self = self,
                         let urlAssert = avUrlAssert {
-                        self.mediaAsserts.append(urlAssert)
+						let media = Media(asset: urlAssert, isSelect: false)
+                        self.mediaAsserts.append(media)
                     }
                 }
             }
